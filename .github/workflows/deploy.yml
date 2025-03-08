@@ -1,5 +1,5 @@
 # Name of the GitHub Actions workflow
-name: Deploy Workflow
+name: Deployciorkflow
 
 # Trigger the workflow on push and pull request events to the main branch
 on:
