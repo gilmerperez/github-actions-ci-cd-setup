@@ -1,5 +1,5 @@
 # Name of workflow
-name: Test workflow
+name: Test Workflow
 
 # Trigger workflow on all pull requests
 on:
@@ -32,6 +32,10 @@ jobs:
       # Run build
       - name: Run Build
         run: npm run build
+
+      # Run Start
+      - name: Run Start
+        run: npm run start
 
       # Run tests
       - name: Run Tests
