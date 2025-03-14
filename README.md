@@ -1,6 +1,6 @@
 # GitHub Actions CI/CD Setup
 
-## Project Summary
+## Project Overview
 
 This project demonstrates the integration of Continuous Integration (CI) and Continuous Deployment (CD) using GitHub Actions, with automatic deployment to Render. The task involves creating a CI/CD pipeline that automatically runs Cypress component tests when a Pull Request (PR) is made to the `develop` branch and deploys the application to Render when code is merged from the `develop` branch to the `main` branch.
 
@@ -29,24 +29,28 @@ These processes aim to ensure that code is tested before deployment and that the
 
 To start the application and run the necessary GitHub Actions workflows, follow these steps:
 
-### 1. Clone the repository:
-```
+### 1. Clone the repository
+
+```bash
 git clone git@github.com:gilmerperez/github-actions-ci-cd-setup.git
 cd github-actions-ci-cd-setup
 ```
 
-### 2. Install Dependencies:
+### 2. Install Dependencies
+
 Make sure all required dependencies are installed before starting the application.
-```
+```bash
 npm install
 ```
 
-### 3. Ryn Cypress Tests:
-```
+### 3. Ryn Cypress Tests
+
+```bash
 npm run test
 ```
 
-### 4. Deploy to Render:
+### 4. Deploy to Render
+
 Whenever changes are merged to the main branch, GitHub Actions will automatically deploy the application to Render.
 
 ## Mock-Up
@@ -62,19 +66,16 @@ Your GitHub Actions for deployments should look similar to the image below:
 ## Instructions
 
 ### 1. Set Up the Project
-
 - Clone the repository to your local machine.
 - Set up a Render account and follow the steps to deploy the application.
 - Make sure the develop branch exists and is used for all feature development.
 
-### 2. Configure GitHub Actions:
-
+### 2. Configure GitHub Actions
 - Set up two `.yml` files in your `.github/workflows/` folder:
 - main.yml: This file will trigger Cypress tests on Pull Requests to the `develop` branch.
 - deploy.yml: This file will deploy the app to Render when changes are merged into the `main` branch.
 
-### 3. Push Changes:
-
+### 3. Push Changes
 - After adding your features, create a Pull Request to the `develop` branch.
 - Ensure that Cypress tests pass in GitHub Actions.
 - Merge the Pull Request to `main`, and the app will automatically be deployed to Render.
@@ -95,10 +96,7 @@ This project utilizes the following tools and technologies:
 
 ## Additional Resources
 
-- Deploy Hooks: [Render Documentation](https://render.com/docs/deploy-hooks)
-- The Render API: [Render Documentation](https://render.com/docs/api)
-- Main and Develop Branches: [GitHub Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-- GitHub Repo Secrets: [Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
-- Deployed Application: [Render Deployment](https://github-actions-ci-cd-setup-8us2.onrender.com)
-- GitHub Repository: [gilmerperez/github-actions-ci-cd-setup](https://github.com/gilmerperez/github-actions-ci-cd-setup)
-
+GitHub Workflow: [What is Gitflow?](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+Deploy Hooks: [Render Documentation](https://render.com/docs/deploy-hooks)
+The Render API: [Render Documentation](https://render.com/docs/api)
+GitHub Repo Secrets: [Using Secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
